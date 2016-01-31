@@ -1,0 +1,62 @@
+.groups__empty-notice {
+	@extend .users__empty-notice;
+}
+
+.groups__list {
+	font-size:16px;
+}
+
+//  <li class="group-item">
+//  	<h3 class="group-item__name">
+//  		My Friends
+//  		<a href="#" class="group-item__delete-action" title="Delete">
+//  			<svg class="group-item__delete-action__icon" alt="Delete">
+//  				<use xlink:href="#delete"></use>
+//  			</svg>
+//  		</a>
+//  	</h3>
+//  
+//  	<ul class="group-item__users">
+//  		<li class="group-item__users_i">
+//  			John Doe
+//  		</li>
+//  	</ul>
+//  </li>
+.group-item {
+	background:rgba(#fff, .1);
+	padding:.6em;
+	color:darken(#fff, 20%);
+
+	&+.group-item {
+		margin-top:.8em;
+	}
+}
+
+.group-item__name {
+	margin:0 0 .45em;
+	padding:0 0 .15em;
+	border-bottom:1px solid rgba(#fff, .3);
+	font-size:1.3em;
+	line-height:1.5em;
+}
+
+.group-item__empty-notice {
+	@extend .users__empty-notice;
+	font-size:16px;
+	text-align:left;
+}
+
+.group-item__empty-notice__link {
+	color:$main-color;
+}
+
+.group-item__users_i {
+	background:$main-color;
+	color:#000;
+	display:inline-block;
+	font-size:18px;
+	line-height:1.3em;
+	padding:.3em .4em;
+	border-radius:.333em;
+	margin:.3em .2em;
+}

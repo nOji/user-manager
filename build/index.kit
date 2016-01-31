@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Manager App</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<!-- @import "../app/fonts/svg-sprite.svg" -->
+	
+	<div class="container">
+		<header class="header">
+			<h1 class="header__headnig">User Management</h1>
+		</header>
+
+		<main role="main" class="main" id="main">
+
+			<section class="management block">
+				<h2 class="block__heading">
+					<svg class="block__heading__icon">
+					    <use xlink:href="#edit"></use>
+					</svg>
+					Manage Users &amp; Groups
+				</h2>
+
+				<div class="cf">
+					<div class="block__half">
+						<section class="block block--sub">
+							<h2 class="block__heading">
+								<svg class="block__heading__icon">
+								    <use xlink:href="#new-user"></use>
+								</svg>
+								Add User
+							</h2>
+
+							<form action="/" method="POST" class="interForm" id="add-user-form">
+								<div class="interForm__input-stack">
+									<label for="" class="interForm__input-stack__label">Enter User Name:</label>
+									<input type="text" class="interForm__input-stack__input" placeholder="User Name Goes Here" autofocus>
+								</div>
+
+								<input type="submit" class="interForm__submit-btn" value="Add">
+							</form>
+						</section>
+					</div><!-- /block-half -->
+
+					<div class="block__half">
+						<section class="add-group block block--sub">
+							<h2 class="block__heading">
+								<svg class="block__heading__icon">
+								    <use xlink:href="#new-group"></use>
+								</svg>
+								Add Group
+							</h2>
+
+							<form action="/" method="POST" class="interForm" id="add-group-form">
+								<div class="interForm__input-stack">
+									<label for="" class="interForm__input-stack__label">Enter Group Name:</label>
+									<input type="text" class="interForm__input-stack__input" placeholder="Group Name Goes Here">
+								</div>
+
+								<input type="submit" class="interForm__submit-btn" value="Add">
+							</form>
+						</section>
+					</div><!-- /block-half -->
+				</div><!-- /cf -->
+			</section><!-- /management.block -->
+
+			<section class="users block">
+				<h2 class="block__heading">
+					<svg class="block__heading__icon">
+					    <use xlink:href="#group"></use>
+					</svg>
+					Users
+				</h2>
+
+				<ul class="users__list" id="users-list"></ul>
+
+				<p class="users__empty-notice" id="users-empty-notice">Currently you don't have any users</p>
+			</section><!-- /users -->
+
+			<section class="groups block">
+				<h2 class="block__heading">
+					<svg class="block__heading__icon">
+					    <use xlink:href="#groups"></use>
+					</svg>
+					Groups
+				</h2>
+
+				<ul class="groups__list" id="groups-list"></ul>
+
+				<p class="groups__empty-notice" id="groups-empty-notice">Currently you don't have any groups</p>
+			</section><!-- /groups -->
+			
+		</main>
+	</div><!-- /container -->
+
+	<script src="js/app.js"></script>
+</body>
+</html>

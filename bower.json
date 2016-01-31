@@ -1,0 +1,23 @@
+{
+  "name": "InterNations Task",
+  "authors": [
+    "Nojan A. <nojanarabi@gmail.com>"
+  ],
+  "description": "InterNations Evaluation Task",
+  "main": "",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

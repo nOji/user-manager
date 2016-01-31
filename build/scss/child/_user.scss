@@ -1,0 +1,160 @@
+.users {
+	font-size:16px; // base
+}
+
+.users__empty-notice {
+	text-align:center;
+	font-size:1.4em;
+	margin:0;
+	padding:1em;
+}
+
+// USER ITEM
+//	<li class="users__item">
+//		<span class="users__item__name">
+//			<svg class="users__item__name__icon">
+//			    <use xlink:href="#user"></use>
+//			</svg>
+//			John Doe
+//		</span>
+//		<time datetime="2001-05-15T19:00">
+//			December 27th 2015<br>
+//			1:12 AM
+//		</time>
+//		<div class="users__item__actions">
+//			<a href="#" class="user-item__action">
+//				<svg class="users__item__name__icon">
+//				    <use xlink:href="#delete"></use>
+//				</svg>
+//				<span class="user-item__action__title">Delete</span>
+//			</a>
+//		</div>
+//	</li>
+.users__item {
+	font-size:1em;
+	float:left;
+	width:22.1%;
+	margin:.6% 1.45%;
+	padding:.4em;
+	background:rgba(#fff, .2);
+
+	@at-root {
+		.users__list {
+			@extend %cf;
+			margin:0 -1.5%;
+		}
+	}
+
+	@media(max-width:900px) {
+		width:47.1%;
+	}
+
+	@media(max-width:900px) {
+		width:100%;
+		margin:1.5% 0;
+		
+		@at-root {
+			.users__list {
+				margin:0;
+			}
+		}
+	}
+}
+
+.users__item__name {
+	font-size:1.3em;
+	display:block;
+	line-height:1.5em;
+	margin:0 0 .5em;
+}
+
+.users__item__name__icon {
+	width:1.5em;
+	height:1.5em;
+	float:left;
+	display:block;
+	padding:.1em;
+	background:$main-color;
+	margin:0 .5em 0 0;
+}
+
+.users__item__created-at {
+	display:block;
+}
+
+//	<div class="users__item__actions">
+//		<a href="#" class="user-item__action">
+//			<svg class="user-item__action__icon">
+//			    <use xlink:href="#delete"></use>
+//			</svg>
+//			<span class="user-item__action__title">Delete</span>
+//		</a>
+//	</div>
+.users__item__actions {
+	margin:1em 0 0;
+}
+
+.user-item__action {
+	font-size:1em;
+	line-height:1.5em;
+	display:block;
+	color:darken(#fff, 20%);
+	text-decoration:none;
+	background:lighten(#000, 20%);
+	padding:.2em .6em;
+	cursor:pointer;
+
+	&:hover,
+	// MOBILE
+	&:active {
+		background:lighten(#000, 10%)
+	}
+
+	&+.user-item__action {
+		margin-top:.2em;
+	}
+}
+
+.user-item__action__icon {
+	width:1.5em;
+	height:1.5em;
+	float:left;
+	margin:0 .4em 0 0;
+	padding:.1em;
+	fill:darken(#fff, 20%);
+}
+
+.user-item__group-selector {
+	input {
+		display:none;
+	}
+
+	font-size:18px;
+	line-height:1.4em;
+	display:block;
+	background:darken(#bbb, 40%);
+	padding:.2em .5em;
+	cursor:pointer;
+
+	&.user-item__group-selector--selected {
+		background:$main-color;
+		color:#000;
+
+		.user-item__group-selector__icon {
+			fill:#000;
+		}
+	}
+}
+
+.user-item__group-selector__icon {
+	fill:#fff;
+	width:1.4em;
+	height:1.4em;
+	float:left;
+	margin:0 .5em 0 0;
+	padding:.1em;
+}
+
+.user-item__groups-head {
+	margin:1em 0 .5em;
+}

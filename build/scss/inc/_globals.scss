@@ -1,0 +1,44 @@
+html {
+	font-family:normal 100%/1.4 $font-main;
+	background:#000
+		url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png')
+		repeat 0 0;
+	color:darken(#fff, 10%);
+}
+
+*,*:after,*:before {
+	box-sizing:border-box;
+}
+
+ul,ol {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+h1,h2,h3,h4 {
+	font-weight:300;
+	text-transform:uppercase;
+}
+
+.container {
+	@extend %cf;
+	width:1200px;
+	max-width:96%;
+	margin:0 auto;
+	padding:0 0 60px;
+}
+
+.main {
+	transform:translateY(-100px);
+	opacity:0;
+	transition:all .2s linear;
+
+	&.main--loaded {
+		transform:translateY(0);
+		opacity:1;
+	}
+}
+
+.cf { @extend %cf; }
+

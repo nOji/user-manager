@@ -1,0 +1,23 @@
+{
+  "name": "internations_task",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cheerio": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-kit": "*",
+    "gulp-order": "*",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-svgmin": "*",
+    "gulp-svgstore": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "path": "*"
+  }
+}

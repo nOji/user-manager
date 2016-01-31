@@ -1,0 +1,55 @@
+//  <form action="/" method="POST" class="interForm">
+//  	<div class="interForm__input-stack">
+//  		<label for="" class="interForm__input-stack__label">Enter User Name:</label>
+//  		<input type="text" class="interForm__input-stack__input">
+//  	</div>
+//  
+//  	<input type="submit" class="interForm__submit-btn" value="Add">
+//  </form>
+.interForm {
+	font-size:16px;
+}
+
+.interForm__input-stack {
+	&+.interForm__input-stack {
+		margin-top:.5em;
+	}
+}
+
+.interForm__input-stack__label {
+	display:block;
+	font-size:1.2em;
+	font-weight:300;
+	text-transform:uppercase;
+	line-height:1.5em;
+	margin:0 0 .2em;
+}
+
+.interForm__input-stack__input {
+	display:block;
+	width:100%;
+	background:transparent;
+	border:none;
+	text-align:center;
+	font-size:1.2em;
+	border-bottom:1px solid rgba(#000, .3);
+	line-height:1em;
+	padding:.4em;
+}
+
+.interForm__submit-btn {
+	display:inline-block;
+	margin:1em 0 0;
+	border:none;
+	background:$main-color;
+	color:#000;
+	font-weight:bold;
+	line-height:1.3em;
+	padding:.4em .6em;
+
+	&:hover,
+	// MOBILE
+	&:active {
+		background:darken($main-color, 20%);
+	}
+}
